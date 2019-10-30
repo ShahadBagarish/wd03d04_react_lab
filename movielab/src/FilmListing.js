@@ -15,6 +15,7 @@ export default class FilmListing extends Component {
     render() {
         let allFilms = this.props.films.map(item => <FilmRow title={item.title} id={item.id} date={item.release_date} path={item.poster_path}
             onFaveToggle = {() => this.props.onFaveToggle(item)}
+            onDetailsClick = {() => this.props.onDetailsClick(item)}
             film = {item}
             key = {item.id}
             isFave = {this.props.faves.includes(item)}
